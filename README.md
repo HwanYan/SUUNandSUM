@@ -1,11 +1,10 @@
 # 区块链挖矿策略实验项目
 
 ## 项目概述
-本项目包含TDSC 2025论文《Novel Bribery Mining Attacks: Impacts on Mining Ecosystem and the “Bribery Miner’s Dilemma” in the Nakamoto-style Blockchain System》的实验代码，分为两个目录：
+本项目包含《Novel Bribery Mining Attacks: Impacts on Mining Ecosystem and the “Bribery Miner’s Dilemma” in the Nakamoto-style Blockchain System》的实验代码，分为两个目录：
 - **SUM**：BSM（Bribed Selfish Mining）策略实验
 - **SUUM**：BSSM（Bribed Semi-Selfish Mining）策略实验
 
-论文全文见：`TDSC '25 full version.pdf`
 
 ## 目录结构
 ```
