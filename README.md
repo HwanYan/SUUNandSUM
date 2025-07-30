@@ -19,7 +19,7 @@ This project contains the experimental code for the paper titled "Novel Bribery 
 │   ├── SUUM_EXP2.py      # Experiment 2: Multi-Strategy Comparison
 │   ├── SUUM_EXP3.py      # Experiment 3: Impact of γ Parameter
 │   └── SUUM_EXP4.py      # Experiment 4: RER and Winning Conditions
-└── TDSC '25 full version.pdf  # Full Paper
+└── Novel Bribery Mining Attacks Impacts on Mining Ecosystem and the Bribery Miner’s Dilemma in the Nakamoto-style Blockchain System.pdf  # Full Paper
 ```
 
 ## SUM Experiment Summary (BSM Strategy)
