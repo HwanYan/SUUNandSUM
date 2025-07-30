@@ -1,74 +1,74 @@
-# 区块链挖矿策略实验项目
+# Blockchain Mining Strategy Experiment Project
 
-## 项目概述
-本项目包含《Novel Bribery Mining Attacks: Impacts on Mining Ecosystem and the “Bribery Miner’s Dilemma” in the Nakamoto-style Blockchain System》的实验代码，分为两个目录：
-- **SUM**：BSM（Bribed Selfish Mining）策略实验
-- **SUUM**：BSSM（Bribed Semi-Selfish Mining）策略实验
+## Project Overview
 
+This project contains the experimental code for the paper titled "Novel Bribery Mining Attacks: Impacts on Mining Ecosystem and the “Bribery Miner’s Dilemma” in the Nakamoto-style Blockchain System", organized into two directories:
+- **SUM**: Experiments on BSM (Bribed Selfish Mining) strategy
+- **SUUM**: Experiments on BSSM (Bribed Semi-Selfish Mining) strategy
 
-## 目录结构
+## Directory Structure
 ```
 .
-├── SUM/                  # BSM策略实验
-│   ├── SUM_EXP1.py       # 实验1：基础RER分析
-│   ├── SUM_EXP2.py       # 实验2：多场景RER对比
-│   ├── SUM_EXP3.py       # 实验3：不同βb值影响
-│   └── SUM_EXP4.py       # 实验4：RER与获胜条件
-├── SUUM/                 # BSSM策略实验
-│   ├── SUUM_EXP1.py      # 实验1：基础RER分析
-│   ├── SUUM_EXP2.py      # 实验2：多策略对比
-│   ├── SUUM_EXP3.py      # 实验3：γ参数影响
-│   └── SUUM_EXP4.py      # 实验4：RER与获胜条件
-└── TDSC '25 full version.pdf  # 论文全文
+├── SUM/                  # BSM Strategy Experiments
+│   ├── SUM_EXP1.py       # Experiment 1: Basic RER Analysis
+│   ├── SUM_EXP2.py       # Experiment 2: Multi-Scenario RER Comparison
+│   ├── SUM_EXP3.py       # Experiment 3: Impact of Different β_b Values
+│   └── SUM_EXP4.py       # Experiment 4: RER and Winning Conditions
+├── SUUM/                 # BSSM Strategy Experiments
+│   ├── SUUM_EXP1.py      # Experiment 1: Basic RER Analysis
+│   ├── SUUM_EXP2.py      # Experiment 2: Multi-Strategy Comparison
+│   ├── SUUM_EXP3.py      # Experiment 3: Impact of γ Parameter
+│   └── SUUM_EXP4.py      # Experiment 4: RER and Winning Conditions
+└── TDSC '25 full version.pdf  # Full Paper
 ```
 
-## SUM实验总结（BSM策略）
+## SUM Experiment Summary (BSM Strategy)
 
-### 实验目的
-评估BSM策略在不同攻击者算力(α)下，对以下各方的相对收益提升(RER)：
-- 攻击者(a)
-- 其他矿池(o)
-- 目标矿池(b)
+### Experiment Objective
+Evaluate the Relative Earnings Rise (RER) of the BSM strategy under different attacker hashpower ($\alpha$), for the following parties:
+- Attacker (a)
+- Other mining pools (o)
+- Target pool (b)
 
-### 关键参数
-- βb = 0.1（目标矿池算力占比）
-- ε = 0.02（贿赂比例）
-- α ∈ [0.01, 0.4]（攻击者总算力范围）
+### Key Parameters
+- $\beta_b$ = 0.1 (Target pool hashpower proportion)
+- $\epsilon$ = 0.02 (Bribery proportion)
+- $\alpha \in [0.01, 0.4]$ (Range of total attacker hashpower)
 
-### 主要发现
-1. **EXP1**：攻击者RER随α增加而提升，目标矿池RER呈非线性变化
-2. **EXP2**：BSM相比诚实挖矿(H)和自私挖矿(SM)有显著收益提升
-3. **EXP3**：βb增大时，攻击者RER提升幅度减小
-4. **EXP4**：攻击者算力>0.3时，分叉率显著增加
+### Key Findings
+1. **EXP1**: Attacker RER increases with $\alpha$, while target pool RER shows nonlinear changes
+2. **EXP2**: BSM achieves significantly higher earnings compared to Honest Mining (H) and Selfish Mining (SM)
+3. **EXP3**: As $\beta_b$ increases, the attacker’s RER improvement diminishes
+4. **EXP4**: When attacker hashpower > 0.3, fork rate significantly increases
 
-## SUUM实验总结（BSSM策略）
+## SUUM Experiment Summary (BSSM Strategy)
 
-### 实验目的
-评估BSSM策略在以下场景的表现：
-- 不同攻击者算力(α)
-- 诚实挖矿算力占比(ρ)
-- 其他矿池加入私有链概率(γ)
+### Experiment Objective
+Evaluate the performance of the BSSM strategy under the following scenarios:
+- Different attacker hashpower ($\alpha$)
+- Honest mining power proportion ($\rho$)
+- Probability of other pools joining the private chain ($\gamma$)
 
-### 关键参数
-- ρ = 0.1（诚实挖矿算力占比）
-- γ = 0.5（加入私有链概率）
-- ε = 0.02（贿赂比例）
+### Key Parameters
+- ρ = 0.1 (Honest mining power proportion)
+- γ = 0.5 (Probability of joining private chain)
+- ε = 0.02 (Bribery proportion)
 
-### 主要发现
-1. **EXP1**：BSSM相比无贿赂策略(BSSM')显著提升攻击者收益
-2. **EXP2**：BSSM相比半自私挖矿(SSM)有20-40%的RER提升
-3. **EXP3**：γ增大可提高私有链获胜概率
-4. **EXP4**：攻击者算力>0.35时，分叉率超过0.25
+### Key Findings
+1. **EXP1**: BSSM significantly improves attacker earnings compared to non-bribery strategy (BSSM')
+2. **EXP2**: BSSM achieves a 20-40% RER improvement over Semi-Selfish Mining (SSM)
+3. **EXP3**: Increasing $\gamma$ improves the winning probability of the private chain
+4. **EXP4**: When attacker hashpower > 0.35, fork rate exceeds 0.25
 
-## 运行说明
-1. 安装依赖：
+## Running Instructions
+1. Install dependencies：
 ```bash
 pip install numpy matplotlib
 ```
-2. 运行单个实验：
+2. Run a single experiment：
 ```bash
 python SUM/SUM_EXP1.py
 ```
-3. 所有实验均输出可视化图表
+3. All experiments output visual charts
 
-> 注：详细实验设计和参数设置请参考各实验文件注释
+> Note: For detailed experimental design and parameter settings, please refer to the comments in each experiment file.
